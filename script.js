@@ -28,7 +28,7 @@ document.getElementById('generate-btn').addEventListener('click', async () => {
     const statusCell = document.getElementById('table-body');
     statusCell.innerHTML = "<tr><td colspan='6'>AI is thinking (2025 Stable Mode)...</td></tr>";
 
-    const API_KEY = "AIzaSyC-JY8hXwwrzj8oOHAW628VTo8aWSetwMc"; // <--- PASTE KEY AGAIN
+    const API_KEY = ""; // <--- PASTE KEY AGAIN
     
     // In late 2025, use 'gemini-2.0-flash' or 'gemini-2.5-flash'
     const MODEL = "gemini-1.5-flash"; 
