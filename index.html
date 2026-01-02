@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSprint x LDCE - AI Timetable</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar card select">
+            <div class="logo">
+                <h2>LDCE IT</h2>
+                <span>AI Scheduler</span>
+            </div>
+            
+            <form id="timetable-form">
+                <h3>Add Subject</h3>
+                <input type="text" id="faculty" placeholder="Faculty Name (e.g., NPD)" required>
+                <input type="text" id="subject" placeholder="Subject Name (e.g., DBMS)" required>
+                <input type="number" id="hours" placeholder="Total Weekly Hours" required>
+                <select name="semester" id="semester">
+                    <option value="3">Semester 3</option>
+                    <option value="5">Semester 5</option>
+                    <option value="7">Semester 7</option>
+                </select>
+                <select name="division" id="division">
+                    <option value="A1">Div - A1</option>
+                    <option value="A2">Div - A2</option>
+                    <option value="A3">Div - A3</option>
+                    <option value="A4">Div - A4</option>
+                </select>
+                
+                <div class="toggle-group">
+                    <label><input type="checkbox" id="cont-lab"> Continuous Lab (2 hrs)</label>
+                </div>
+                
+                <button type="button" id="add-btn" class="btn">Add to List</button>
+            </form>
+            <!-- <hr class="divider"> -->
+            <div class="added-items">
+                <h4>Requirement List</h4>
+                <ul id="req-list"></ul>
+            </div>
+
+            <button id="generate-btn" class="primary-btn">Generate with AI</button>
+        </aside>
+
+        <main class="content">
+            <!-- <header class="main-header">
+                <h1>LDCE IT Department</h1>
+                <p>AI-Powered Semester Timetable Generator</p>
+            </header> -->
+            <header class="main-header card">
+                <h1>Semester Master Timetable</h1>
+                <div class="status-badge">Draft Mode</div>
+            </header>
+
+            <div id="timetable-wrapper" class="card">
+                <table id="result-table">
+                    <thead>
+                        <tr>
+                            <th>Time / Day</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr><td colspan="6" class="placeholder-text">Enter requirements and click Generate...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
